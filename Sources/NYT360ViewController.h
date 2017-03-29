@@ -122,6 +122,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)reorientVerticalCameraAngleToHorizon:(BOOL)animated;
 
+/**
+ *  Removes the delegates and private variables.
+ */
+- (void)cleanController;
+
 @end
 
 NS_ASSUME_NONNULL_END

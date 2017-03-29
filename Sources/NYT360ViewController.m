@@ -145,6 +145,16 @@ CGRect NYT360ViewControllerSceneBoundsForScreenBounds(CGRect screenBounds) {
     [self.cameraController reorientVerticalCameraAngleToHorizon:animated];
 }
 
+- (void)cleanController {
+	self.sceneView.delegate = nil;
+	self.sceneView.playing = false;
+	_sceneView = nil;
+
+	[self.cameraController stopMotionUpdates];
+	self.cameraController.delegate = nil;
+	_cameraController = nil;
+}
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
