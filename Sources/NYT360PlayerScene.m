@@ -89,7 +89,7 @@
         SKScene *skScene = ({
 			AVAssetTrack *assetTrack = [[player.currentItem.asset tracksWithMediaType:AVMediaTypeVideo] firstObject];
 			CGSize assetDimensions = assetTrack ? CGSizeApplyAffineTransform(assetTrack.naturalSize, assetTrack.preferredTransform) : CGSizeMake(1280, 1280);
-			SKScene *scene = [[SKScene alloc] initWithSize:CGSizeMake(fabsf(assetDimensions.width), fabsf(assetDimensions.height))];
+			SKScene *scene = [[SKScene alloc] initWithSize:CGSizeMake(fabs(assetDimensions.width), fabs(assetDimensions.height))];
             scene.shouldRasterize = YES;
             scene.scaleMode = SKSceneScaleModeAspectFit;
             _videoNode = ({

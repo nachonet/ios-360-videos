@@ -31,6 +31,8 @@
 		47DCD2A31D493E1400FBCD4B /* NYT360EulerAngleCalculations.h in Headers */ = {isa = PBXBuildFile; fileRef = 47DCD2A11D493E1400FBCD4B /* NYT360EulerAngleCalculations.h */; };
 		47DCD2A41D493E1400FBCD4B /* NYT360EulerAngleCalculations.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DCD2A21D493E1400FBCD4B /* NYT360EulerAngleCalculations.m */; };
 		47FD3DBE1D52508100BC0248 /* NYT360MotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 472324FE1D5240DF00784F8F /* NYT360MotionManager.m */; };
+		7B87E20B1E8C01F200CF0993 /* NYT360ViewerScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B87E2091E8C01F200CF0993 /* NYT360ViewerScene.h */; };
+		7B87E20C1E8C01F200CF0993 /* NYT360ViewerScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B87E20A1E8C01F200CF0993 /* NYT360ViewerScene.m */; };
 		934A494D1D46B0A1001AD295 /* NYT360Video.h in Headers */ = {isa = PBXBuildFile; fileRef = 934A494C1D46B0A1001AD295 /* NYT360Video.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		934A49881D46B446001AD295 /* NYT360CameraController.h in Headers */ = {isa = PBXBuildFile; fileRef = 934A49821D46B446001AD295 /* NYT360CameraController.h */; };
 		934A49891D46B446001AD295 /* NYT360CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934A49831D46B446001AD295 /* NYT360CameraController.m */; };
@@ -89,6 +91,8 @@
 		47ACFE331D54DFC70054F8D0 /* NYT360CameraPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYT360CameraPanGestureRecognizer.m; sourceTree = "<group>"; };
 		47DCD2A11D493E1400FBCD4B /* NYT360EulerAngleCalculations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYT360EulerAngleCalculations.h; sourceTree = "<group>"; };
 		47DCD2A21D493E1400FBCD4B /* NYT360EulerAngleCalculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYT360EulerAngleCalculations.m; sourceTree = "<group>"; };
+		7B87E2091E8C01F200CF0993 /* NYT360ViewerScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYT360ViewerScene.h; sourceTree = "<group>"; };
+		7B87E20A1E8C01F200CF0993 /* NYT360ViewerScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYT360ViewerScene.m; sourceTree = "<group>"; };
 		934A49491D46B0A1001AD295 /* NYT360Video.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NYT360Video.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		934A494C1D46B0A1001AD295 /* NYT360Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYT360Video.h; sourceTree = "<group>"; };
 		934A49531D46B119001AD295 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				47DCD2A21D493E1400FBCD4B /* NYT360EulerAngleCalculations.m */,
 				934A49841D46B446001AD295 /* NYT360PlayerScene.h */,
 				934A49851D46B446001AD295 /* NYT360PlayerScene.m */,
+				7B87E2091E8C01F200CF0993 /* NYT360ViewerScene.h */,
+				7B87E20A1E8C01F200CF0993 /* NYT360ViewerScene.m */,
 				934A49861D46B446001AD295 /* NYT360ViewController.h */,
 				934A49871D46B446001AD295 /* NYT360ViewController.m */,
 				934A494C1D46B0A1001AD295 /* NYT360Video.h */,
@@ -237,6 +243,7 @@
 				47ACFE341D54DFC70054F8D0 /* NYT360CameraPanGestureRecognizer.h in Headers */,
 				934A49881D46B446001AD295 /* NYT360CameraController.h in Headers */,
 				47DCD2A31D493E1400FBCD4B /* NYT360EulerAngleCalculations.h in Headers */,
+				7B87E20B1E8C01F200CF0993 /* NYT360ViewerScene.h in Headers */,
 				934A498A1D46B446001AD295 /* NYT360PlayerScene.h in Headers */,
 				934A498C1D46B446001AD295 /* NYT360ViewController.h in Headers */,
 			);
@@ -311,6 +318,7 @@
 				TargetAttributes = {
 					934A49481D46B0A1001AD295 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 					};
 					934A495B1D46B3B5001AD295 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -373,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				934A498D1D46B446001AD295 /* NYT360ViewController.m in Sources */,
+				7B87E20C1E8C01F200CF0993 /* NYT360ViewerScene.m in Sources */,
 				47ACFE351D54DFC70054F8D0 /* NYT360CameraPanGestureRecognizer.m in Sources */,
 				934A49891D46B446001AD295 /* NYT360CameraController.m in Sources */,
 				934A498B1D46B446001AD295 /* NYT360PlayerScene.m in Sources */,
@@ -513,6 +522,8 @@
 				PRODUCT_NAME = NYT360Video;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -564,6 +575,7 @@
 				PRODUCT_NAME = NYT360Video;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

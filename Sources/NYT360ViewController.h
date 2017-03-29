@@ -66,6 +66,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (id)initWithAVPlayer:(AVPlayer *)player motionManager:(id<NYT360MotionManagement>)motionManager;
 
+/**
+ *  Initialize a new 360 playback view controller, with the given UIImage instance and device motion manager.
+ */
+- (id)initWithUIImage:(UIImage *)image motionManager:(id<NYT360MotionManagement>)motionManager;
+
 #pragma mark - Playback
 
 /**

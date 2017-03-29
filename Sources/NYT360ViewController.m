@@ -9,6 +9,7 @@
 #import "NYT360ViewController.h"
 #import "NYT360CameraController.h"
 #import "NYT360PlayerScene.h"
+#import "NYT360ViewerScene.h"
 
 CGRect NYT360ViewControllerSceneFrameForContainingBounds(CGRect containingBounds, CGSize underlyingSceneSize) {
     
@@ -45,6 +46,7 @@ CGRect NYT360ViewControllerSceneBoundsForScreenBounds(CGRect screenBounds) {
 @property (nonatomic, readonly) CGSize underlyingSceneSize;
 @property (nonatomic, readonly) SCNView *sceneView;
 @property (nonatomic, readonly) NYT360PlayerScene *playerScene;
+@property (nonatomic, readonly) NYT360ViewerScene *viewerScene;
 @property (nonatomic, readonly) NYT360CameraController *cameraController;
 
 @end
@@ -76,6 +78,31 @@ CGRect NYT360ViewControllerSceneBoundsForScreenBounds(CGRect screenBounds) {
 
     }
     return self;
+}
+
+- (id)initWithUIImage:(UIImage *)image motionManager:(id<NYT360MotionManagement>)motionManager {
+	self = [super init];
+	if (self) {
+		CGRect screenBounds = [[UIScreen mainScreen] bounds];
+		CGRect initialSceneFrame = NYT360ViewControllerSceneBoundsForScreenBounds(screenBounds);
+		_underlyingSceneSize = initialSceneFrame.size;
+		_sceneView = [[SCNView alloc] initWithFrame:initialSceneFrame];
+		_viewerScene = [[NYT360ViewerScene alloc] initWithUIImage:image boundToView:_sceneView];
+		_cameraController = [[NYT360CameraController alloc] initWithView:_sceneView motionManager:motionManager];
+		_cameraController.delegate = self;
+		
+		typeof(self) __weak weakSelf = self;
+		_cameraController.compassAngleUpdateBlock = ^(float compassAngle) {
+			typeof(self) strongSelf = weakSelf;
+			if (!strongSelf) {
+				return;
+			}
+			
+			[strongSelf.delegate nyt360ViewController:strongSelf didUpdateCompassAngle:strongSelf.compassAngle];
+		};
+		
+	}
+	return self;
 }
 
 #pragma mark - Playback
